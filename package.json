@@ -1,0 +1,14 @@
+{
+  "name": "scopesum",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Предварительная смета проекта с себестоимостью, резервом и скидкой; подписанный договор не создаётся.",
+  "engines": {
+    "node": ">=24.15 <25"
+  },
+  "scripts": {
+    "start": "node start.js",
+    "test": "node --test tests/*.test.js"
+  }
+}

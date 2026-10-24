@@ -1,0 +1,51 @@
+[
+  {
+    "collection": "projects",
+    "as": "p",
+    "data": {
+      "name": "Учебная смета",
+      "client": "Пример",
+      "currency": "KZT",
+      "reserve": 10,
+      "discount": "0",
+      "status": "draft"
+    }
+  },
+  {
+    "collection": "lines",
+    "data": {
+      "project": "$p",
+      "description": "Пример работы",
+      "quantity": 2,
+      "price": "5000",
+      "cost": "2000"
+    },
+    "expect": "Итог: 11000.00"
+  },
+  {
+    "collection": "projects",
+    "id": "$p",
+    "data": {
+      "name": "Учебная смета",
+      "client": "Пример",
+      "currency": "KZT",
+      "reserve": 10,
+      "discount": "500",
+      "status": "draft"
+    },
+    "expect": "Итог: 10500.00"
+  },
+  {
+    "collection": "projects",
+    "id": "$p",
+    "error": "Скидка",
+    "data": {
+      "name": "Учебная смета",
+      "client": "Пример",
+      "currency": "KZT",
+      "reserve": 10,
+      "discount": "50000",
+      "status": "draft"
+    }
+  }
+]
