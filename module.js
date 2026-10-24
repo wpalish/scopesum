@@ -69,11 +69,15 @@ const definition = {
     }
     for (const l of rows(state, "lines")) {
       const p = byId(state, "projects", l.project),
-        old = changed(before, "lines", l.id);
-      if (p.status !== "draft")
+        old = changed(before, "lines", l.id),
+        previousParent = old && byId(before, "projects", old.project);
+      if (
+        p.status !== "draft" ||
+        (previousParent && previousParent.status !== "draft")
+      )
         required(
           old && JSON.stringify(old) === JSON.stringify(l),
-          "Верните смету в черновик до изменения работ.",
+          "Работы можно менять и переносить только между черновиками смет.",
         );
     }
   },

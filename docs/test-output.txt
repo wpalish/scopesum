@@ -2,33 +2,39 @@ TAP version 13
 # Subtest: ScopeSum: complete original workflow, calculation and rejected invalid transition
 ok 1 - ScopeSum: complete original workflow, calculation and rejected invalid transition
   ---
-  duration_ms: 2.980583
+  duration_ms: 2.762875
   type: 'test'
   ...
 # Subtest: real file restart, optimistic conflict and validated restore into an empty database
 ok 2 - real file restart, optimistic conflict and validated restore into an empty database
   ---
-  duration_ms: 2.855208
+  duration_ms: 7.70925
   type: 'test'
   ...
 # Subtest: HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
 ok 3 - HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
   ---
-  duration_ms: 73.53075
+  duration_ms: 77.832875
   type: 'test'
   ...
 # Subtest: two products on one host use isolated session cookies and preserve both logins
 ok 4 - two products on one host use isolated session cookies and preserve both logins
   ---
-  duration_ms: 87.398917
+  duration_ms: 91.379917
   type: 'test'
   ...
-1..4
-# tests 4
+# Subtest: ScopeSum: protected source lines cannot escape into another draft
+ok 5 - ScopeSum: protected source lines cannot escape into another draft
+  ---
+  duration_ms: 20.3015
+  type: 'test'
+  ...
+1..5
+# tests 5
 # suites 0
-# pass 4
+# pass 5
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 212.076334
+# duration_ms 236.654416
